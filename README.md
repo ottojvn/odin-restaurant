@@ -19,4 +19,5 @@ Este é um projeto que tem como objetivo praticar a manipulação do DOM usando 
 3. Execute o comando npm install para instalar as dependências do projeto
 4. Execute o comando npm run build para gerar o arquivo bundle.js usando o Webpack
 5. Abra o arquivo index.html na pasta dist em seu navegador para visualizar o site
-6. Você também pode executar o comando npm run start para iniciar o servidor local e abrir o site automaticamente em seu navegador padrão. odin-restaurant
+
+Você também pode executar o comando npm run start para iniciar o servidor local e abrir o site automaticamente em seu navegador padrão. odin-restaurant

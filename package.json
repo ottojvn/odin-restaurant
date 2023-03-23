@@ -1,0 +1,27 @@
+{
+  "name": "odin-restaurant",
+  "version": "1.0.0",
+  "description": "Dynamically rendering restaurant homepage. Project for The Odin Project JavaScript Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottojvn/odin-restaurant.git"
+  },
+  "author": "Joao Victor Otto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ottojvn/odin-restaurant/issues"
+  },
+  "homepage": "https://github.com/ottojvn/odin-restaurant#readme",
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.6",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
+  }
+}
