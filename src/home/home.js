@@ -69,7 +69,7 @@ const home = () => {
 
   const ratatouilleFigure = document.createElement("figure");
   ratatouilleFigure.id = "ratatouille";
-  ratatouilleHeader.appendChild(ratatouilleFigure);
+  ratatouilleSection.appendChild(ratatouilleFigure);
 
   const ratatouilleImg = document.createElement("img");
   ratatouilleImg.src = Ratatouille;
