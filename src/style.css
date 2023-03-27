@@ -2,11 +2,15 @@
   --primary-color: #563c55;
   --secondary-color: #a372a2;
   --tertiary-color: #634662;
+  --font-color: #bf1e2e;
 }
 
 body {
   background-color: var(--primary-color);
   font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  color: var(--font-color);
 }
 
 header {
@@ -32,24 +36,18 @@ header {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a372a2",endColorstr="#563c55",GradientType=1);
 
-  position: fixed;
-  bottom: 0;
-  right: 100;
-  height: 100vh;
-  width: 20vw;
-
-  padding-left: 1%;
-
   text-align: left;
 }
 
 #title-container {
-  width: 75%;
   height: 25%;
-
   background: url("./img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+nav {
+  margin-top: 25%;
 }
 
 #tabs > ul {
@@ -67,10 +65,29 @@ header {
   text-align: center;
 
   font-size: 2rem;
+  text-shadow: 0 0 2px gold;
+  font-weight: bold;
 }
 
-#title {
-  font-size: 2rem;
-
-  margin-left: 5%;
+.tab-button:hover {
+  box-shadow: 0 0 3px gold;
+  cursor: pointer;
 }
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 2%;
+
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 3rem;
+  text-shadow: 0 0 2px gold;
+  font-weight: bold;
+}
+
+
