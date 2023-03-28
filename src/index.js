@@ -1,5 +1,6 @@
 import "./style.css";
 import home from "./home/home.js";
+import menu from "./menu/menu.js";
 
 const cont = document.querySelector("div#content");
 
@@ -14,16 +15,32 @@ const nav = document.createElement("nav");
 nav.id = "tabs";
 header.appendChild(nav);
 
+let pages = [
+  {
+    name: "Home",
+    id: "home",
+    load: home,
+  },
+  {
+    name: "Menu",
+    id: "menu",
+    load: menu,
+  },
+];
+
 const tabs = document.createElement("ul");
 nav.appendChild(tabs);
 
-const homeTab = document.createElement("li");
-homeTab.textContent = "Home";
-homeTab.addEventListener("click", () => {
-  home();
+pages.forEach((page) => {
+  const pageTab = document.createElement("li");
+  pageTab.id = page.id;
+  pageTab.textContent = page.name;
+  pageTab.addEventListener("click", () => {
+    page.load();
+  });
+  pageTab.classList.add("tab-button");
+  tabs.appendChild(pageTab);
 });
-homeTab.classList.add("tab-button");
-tabs.appendChild(homeTab);
 
 window.addEventListener("load", () => {
   home();
