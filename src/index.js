@@ -1,6 +1,7 @@
 import "./style.css";
 import home from "./home/home.js";
 import menu from "./menu/menu.js";
+import contact from "./contact/contact.js";
 
 const cont = document.querySelector("div#content");
 
@@ -22,9 +23,14 @@ let pages = [
     load: home,
   },
   {
-    name: "Menu",
+    name: "Cardapio",
     id: "menu",
     load: menu,
+  },
+  {
+    name: "Contato",
+    id: "contact",
+    load: contact,
   },
 ];
 
