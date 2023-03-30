@@ -1,6 +1,3 @@
-import Remy from "./remy.png";
-import Ratatouille from "./ratatouille.webp";
-
 const home = () => {
   let main = document.querySelector("main");
 

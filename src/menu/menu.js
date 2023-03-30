@@ -1,6 +1,6 @@
-import Linguine from "./linguine.jpg";
-import Risoto from "./risoto.webp";
-import Steak from "./steak.jpg";
+import Linguine from "./img/linguine.jpg";
+import Risoto from "./img/risoto.jpg";
+import Steak from "./img/steak.jpg";
 
 const menu = () => {
   const main = document.querySelector("main");

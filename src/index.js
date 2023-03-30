@@ -2,6 +2,7 @@ import "./style.css";
 import home from "./home/home.js";
 import menu from "./menu/menu.js";
 import contact from "./contact/contact.js";
+import chefs from "./chefs/chefs.js";
 
 const cont = document.querySelector("div#content");
 
@@ -18,14 +19,19 @@ header.appendChild(nav);
 
 let pages = [
   {
-    name: "Sobre",
-    id: "home",
-    load: home,
-  },
-  {
     name: "Cardapio",
     id: "menu",
     load: menu,
+  },
+  {
+    name: "Chefs",
+    id: "chefs",
+    load: chefs,
+  },
+  {
+    name: "Sobre",
+    id: "home",
+    load: home,
   },
   {
     name: "Contato",
