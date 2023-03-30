@@ -18,7 +18,7 @@ header.appendChild(nav);
 
 let pages = [
   {
-    name: "Home",
+    name: "Sobre",
     id: "home",
     load: home,
   },
@@ -48,6 +48,9 @@ pages.forEach((page) => {
   tabs.appendChild(pageTab);
 });
 
+const main = document.createElement("main");
+cont.appendChild(main);
+
 window.addEventListener("load", () => {
-  home();
+  menu();
 });
