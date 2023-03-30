@@ -1,15 +1,20 @@
 import Linguine from "./img/linguine.jpg";
 import Risoto from "./img/risoto.jpg";
 import Steak from "./img/steak.jpg";
+import Ratatouille from "./img/ratatouille.jpg";
 
 const menu = () => {
   const main = document.querySelector("main");
   main.innerHTML = "";
 
-  const menu = document.createElement("section");
-  main.appendChild(menu);
-
   const foods = [
+    {
+      name: "Ratatouille",
+      id: "ratatouille",
+      description:
+        "Nosso prato da casa é a famosa ratatouille, criada pelo nosso talentoso chef Remy. Essa iguaria francesa é feita com uma variedade de legumes frescos, cuidadosamente selecionados e preparados para garantir o sabor e a textura perfeitos. Cada camada de vegetais é disposta com maestria, criando uma apresentação visualmente deslumbrante. O prato é finalizado com uma deliciosa mistura de ervas e temperos, que realçam ainda mais os sabores naturais dos ingredientes. A ratatouille do chef Remy é um prato que não pode ser encontrado em nenhum outro lugar, e é um verdadeiro deleite para os amantes da culinária francesa.",
+      image: Ratatouille,
+    },
     {
       name: "Linguine com frutos do mar",
       id: "linguine-frutos-do-mar",
@@ -33,13 +38,30 @@ const menu = () => {
     },
   ];
 
+  const menuSection = document.createElement("section");
+  menuSection.id = "menu";
+  main.appendChild(menuSection);
+
+  const menuHeader = document.createElement("h2");
+  menuHeader.textContent = "Nossos pratos";
+  menuSection.appendChild(menuHeader);
+
+  const menuIntro = document.createElement("p");
+  menuIntro.textContent =
+    "Nosso menu é composto por pratos elaborados com ingredientes frescos e de alta qualidade, e cada prato é preparado com a atenção aos detalhes que só os verdadeiros amantes da culinária conseguem proporcionar. Estamos ansiosos para recebê-lo em nosso restaurante e compartilhar a nossa paixão pela boa comida e pelo serviço de qualidade.";
+  menuSection.appendChild(menuIntro);
+
+  const menuDiv = document.createElement("div");
+  menuDiv.id = "menu-itens";
+  menuSection.appendChild(menuDiv);
+
   foods.forEach((food) => {
     const div = document.createElement("div");
     div.classList.add("food-div");
     div.id = food.id;
-    menu.appendChild(div);
+    menuSection.appendChild(div);
 
-    const foodName = document.createElement("h2");
+    const foodName = document.createElement("h3");
     foodName.textContent = food.name;
     div.appendChild(foodName);
 
