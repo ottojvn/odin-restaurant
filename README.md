@@ -7,10 +7,7 @@ Este é um projeto que tem como objetivo praticar a manipulação do DOM usando 
 ### Com este projeto, aprendi a:
 
 - Usar o Webpack para gerenciar e empacotar módulos de JavaScript
-- Importar e exportar módulos de JavaScript
-- Manipular o DOM usando JavaScript para gerar conteúdo dinamicamente
 - Trabalhar com abas de navegação no site
-- Utilizar o GitHub Pages para hospedar um site estático
 
 ## Como executar o projeto
 
@@ -20,4 +17,4 @@ Este é um projeto que tem como objetivo praticar a manipulação do DOM usando 
 4. Execute o comando npm run build para gerar o arquivo bundle.js usando o Webpack
 5. Abra o arquivo index.html na pasta dist em seu navegador para visualizar o site
 
-Você também pode executar o comando npm run start para iniciar o servidor local e abrir o site automaticamente em seu navegador padrão. odin-restaurant
+Você também pode executar o comando npm run start para iniciar o servidor local e abrir o site automaticamente em seu navegador padrão
