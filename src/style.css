@@ -1,101 +1,121 @@
-:root {
-  --primary-color: #563c55;
-  --secondary-color: #a372a2;
-  --tertiary-color: #634662;
-  --font-color: #bf1e2e;
-}
-
 body {
-  background-color: var(--primary-color);
+  margin: 0 auto;
   font-family: sans-serif;
-  padding: 0;
-  margin: 0;
-  color: var(--font-color);
-}
-
-header {
-  /* Linear Gradient */
-  background: var(--secondary-color);
-  background: -moz-linear-gradient(
-    90deg,
-    var(--secondary-color) 0%,
-    var(--secondary-color) 10%,
-    var(--primary-color) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    var(--secondary-color) 0%,
-    var(--secondary-color) 10%,
-    var(--primary-color) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color) 0%,
-    var(--secondary-color) 10%,
-    var(--primary-color) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a372a2",endColorstr="#563c55",GradientType=1);
-
-  text-align: left;
-}
-
-#title-container {
-  height: 300px;
-  background: url("./img/logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-nav {
-  margin-top: 20px;
-}
-
-#tabs > ul {
-  padding: 0;
-}
-
-.tab-button {
-  list-style: none;
-  width: 100%;
-  height: 50px;
-
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  text-align: center;
-
-  font-size: 2rem;
-  text-shadow: 0 0 2px gold;
-  font-weight: bold;
-}
-
-.tab-button:hover {
-  box-shadow: 0 0 3px gold;
-  cursor: pointer;
 }
 
 #content {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 2%;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 1%;
 
-  height: 100vh;
-  max-width: 1280px;
   margin: 0 auto;
 }
 
-h2 {
-  font-size: 3rem;
-  text-shadow: 0 0 2px gold;
-  font-weight: bold;
+#content > * {
+  padding: 5px;
 }
 
-.food-div img {
-  height: 300px;
-  width: 300px;
+header {
+  border-right: 5px inset #bf1e2e;
+  height: max(100%, 100vh);
+  text-align: left;
 }
 
-main img {
-  width: 500px;
-  height: 500px;
+#logo {
+  width: 100%;
+  height: 100px;
+  background-image: url("./img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+ul {
+  padding: 0.8rem;
+}
+.tab-button {
+  list-style-type: none;
+  text-align: left;
+
+  margin: 0.2rem;
+  padding: 0.2rem;
+
+  height: 3rem;
+  width: 100%;
+
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+.tab-button:last-child {
+  border-bottom: 0px solid black;
+}
+
+.tab-button:hover {
+  background-color: rgba(191, 30, 46, 0.25);
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.card div {
+  margin-left: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card img {
+  margin-right: auto;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
 }

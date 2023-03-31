@@ -10,7 +10,7 @@ const header = document.createElement("header");
 cont.appendChild(header);
 
 const titleDiv = document.createElement("div");
-titleDiv.id = "title-container";
+titleDiv.id = "logo";
 header.appendChild(titleDiv);
 
 const nav = document.createElement("nav");

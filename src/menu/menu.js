@@ -2,6 +2,7 @@ import Linguine from "./img/linguine.jpg";
 import Risoto from "./img/risoto.jpg";
 import Steak from "./img/steak.jpg";
 import Ratatouille from "./img/ratatouille.jpg";
+import _ from "./menu.css";
 
 const menu = () => {
   const main = document.querySelector("main");
@@ -57,21 +58,24 @@ const menu = () => {
 
   foods.forEach((food) => {
     const div = document.createElement("div");
-    div.classList.add("food-div");
+    div.classList.add("card");
     div.id = food.id;
     menuSection.appendChild(div);
-
-    const foodName = document.createElement("h3");
-    foodName.textContent = food.name;
-    div.appendChild(foodName);
-
-    const foodDesc = document.createElement("p");
-    foodDesc.textContent = food.description;
-    div.appendChild(foodDesc);
 
     const foodImage = document.createElement("img");
     foodImage.src = food.image;
     div.appendChild(foodImage);
+
+    const textDiv = document.createElement("div");
+    div.appendChild(textDiv);
+
+    const foodName = document.createElement("h3");
+    foodName.textContent = food.name;
+    textDiv.appendChild(foodName);
+
+    const foodDesc = document.createElement("p");
+    foodDesc.textContent = food.description;
+    textDiv.appendChild(foodDesc);
   });
 };
 

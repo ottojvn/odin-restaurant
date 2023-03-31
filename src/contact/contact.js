@@ -2,6 +2,15 @@ const contact = () => {
   const main = document.querySelector("main");
   main.innerHTML = "";
 
+  const h2 = document.createElement("h2");
+  h2.textContent = "Entre em contato";
+  main.appendChild(h2);
+
+  const p = document.createElement("p");
+  p.textContent =
+    "Preencha o formulário abaixo para entrar em contato conosco:";
+  main.appendChild(p);
+
   const form = document.createElement("form");
   main.appendChild(form);
 

@@ -50,24 +50,33 @@ const chefs = () => {
   header.textContent = "Nossos chefs";
   section.appendChild(header);
 
+  const intro = document.createElement("p");
+  intro.textContent = "Cada chef traz consigo uma história única e um conjunto de habilidades culinárias distintas que contribuem para a excelência do Gusteau. Deixe-se levar pela riqueza de sabores e aromas que esses talentosos chefs trazem para a mesa.";
+  section.appendChild(intro);
+
   chefs.forEach((c) => {
     const div = document.createElement("div");
+    div.classList.add("card");
     div.id = c.name.toLowerCase();
     section.appendChild(div);
-
-    const chefName = document.createElement("h3");
-    chefName.textContent = c.name;
-    div.appendChild(chefName);
-
-    const chefDesc = document.createElement("p");
-    chefDesc.textContent = c.desc;
-    div.appendChild(chefDesc);
 
     const chefImg = document.createElement("img");
     chefImg.src = c.img;
     chefImg.width = "500px";
     chefImg.height = "500px";
     div.appendChild(chefImg);
+
+    const textDiv = document.createElement("div");
+    div.appendChild(textDiv);
+
+    const chefName = document.createElement("h3");
+    chefName.textContent = c.name;
+    textDiv.appendChild(chefName);
+
+    const chefDesc = document.createElement("p");
+    chefDesc.textContent = c.desc;
+    textDiv.appendChild(chefDesc);
+
   });
 };
 
